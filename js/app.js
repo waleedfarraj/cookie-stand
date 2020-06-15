@@ -3,6 +3,7 @@
 var workingHours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"]
 var newNum = 0
 var finaleSale = 0
+var footerTotal = 0 // i will use this one for  footer total
 // var branchName = [Seattle,Tokyo,Dubai,Paris,Lima]
 function Branch(location, minmum, maximum, avagrgeSold) {
      this.location = location
@@ -65,6 +66,10 @@ Branch.prototype.getRandomCustomers = function () {
                 var td =document.createElement('td');
                 td.textContent =this.coockiesPerHour[i]
                 tr.appendChild(td);}
+                var td = document.createElement('td')
+            td.textContent = this.totalCookies
+            tr.appendChild(td);
+
             table.appendChild(tr);
             article.appendChild(table);
            
@@ -86,6 +91,10 @@ Branch.prototype.getRandomCustomers = function () {
             var th =document.createElement('th');
             th.textContent =workingHours[i]
             tr.appendChild(th);}
+            var th = document.createElement('th')
+            th.textContent ="Daily location total"
+            tr.appendChild(th);
+
             table.appendChild(tr);
             article.appendChild(table);
 
@@ -102,10 +111,15 @@ Branch.prototype.getRandomCustomers = function () {
         tr.appendChild(th);
         for(var i = 0 ;i < workingHours.length; i++){
         var th =document.createElement('th');
+        footerTotal=footerTotal+Seattle.coockiesPerHour[i]+Tokyo.coockiesPerHour[i]+Dubai.coockiesPerHour[i]+Paris.coockiesPerHour[i]+Lima.coockiesPerHour[i]
         th.textContent =Seattle.coockiesPerHour[i]+Tokyo.coockiesPerHour[i]+Dubai.coockiesPerHour[i]+Paris.coockiesPerHour[i]+Lima.coockiesPerHour[i]
         tr.appendChild(th);}
+        var th = document.createElement('th')
+        th.textContent =footerTotal;
+        tr.appendChild(th);
         table.appendChild(tr);
         article.appendChild(table);
+
             
         }
 
