@@ -4,6 +4,10 @@ var workingHours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "
 var newNum = 0
 var finaleSale = 0
 var footerTotal = 0 // i will use this one for  footer total
+var parentElement = document.getElementById('sales');
+var article = document.createElement('article');
+parentElement.appendChild(article);
+var table = document.createElement('table');
 // var branchName = [Seattle,Tokyo,Dubai,Paris,Lima]
 function Branch(location, minmum, maximum, avagrgeSold) {
      this.location = location
@@ -54,10 +58,7 @@ Branch.prototype.getRandomCustomers = function () {
 
         // }
         Branch.prototype.render = function(){
-            var parentElement = document.getElementById('sales');
-            var article = document.createElement('article');
-            parentElement.appendChild(article);
-            var table = document.createElement('table');
+           
             var tr = document.createElement('tr');
             var td = document.createElement('td')
             td.textContent = this.location
@@ -79,10 +80,7 @@ Branch.prototype.getRandomCustomers = function () {
         }
 
         function headerMaker() {
-            var parentElement = document.getElementById('sales');
-            var article = document.createElement('article');
-            parentElement.appendChild(article);
-            var table = document.createElement('table');
+          
             var tr = document.createElement('tr');
             var th = document.createElement('th')
             th.textContent ="___________"
@@ -102,9 +100,7 @@ Branch.prototype.getRandomCustomers = function () {
 
         }
         function footerMaker(){var parentElement = document.getElementById('sales');
-        var article = document.createElement('article');
-        parentElement.appendChild(article);
-        var table = document.createElement('table');
+       
         var tr = document.createElement('tr');
         var th = document.createElement('th')
         th.textContent ="totals"
