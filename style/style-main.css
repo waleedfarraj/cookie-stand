@@ -1,0 +1,23 @@
+header{
+    height:300px;
+    width: 100%;
+    background-color: brown;
+    margin: auto
+
+
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: salmon;
+}
+div{
+    width: 200px;
+    height: 200px;
+}
+.image1{
+float: right;
+width:33%;
+}
