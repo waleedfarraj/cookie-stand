@@ -1,0 +1,33 @@
+table { 
+    background-color: tan;
+    border-style: double;
+    widows: 80%;
+    margin-left: 20%;
+    margin-top: 20px;
+
+}
+th,td {
+    border: 1px solid tomato;
+    padding: 15px;
+    text-align: left;
+    font-family: sans-serif;
+
+
+
+}
+form {
+    margin-left: 20%;
+}
+.uglyfish{
+    margin-left: 20%;
+}
+tr:hover {
+    background-color: thistle;
+}
+#new-stand{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 2em;
+    font-size: 22;
+    border: wheat 1px solid;
+    color:darkred;
+}
